@@ -2,7 +2,7 @@
 import listeningImage from '../components/images/music.jpeg';
 import { IoIosArrowDropright } from "react-icons/io";
 import { useRouter } from 'next/navigation';
-import Link from 'next/link';
+import Image from 'next/image';
 
 
 const Home: React.FC = () => {
@@ -17,7 +17,7 @@ const Home: React.FC = () => {
       <h1 className='absolute text-white font-bold mt-64 ml-8 text-3xl'>
           Relax Here
       </h1>
-        <img src={listeningImage.src} alt="image" className='rounded-b-3xl' />
+        <Image src={listeningImage.src} width={500} height={500} alt="calm guy image" className='rounded-b-3xl' />
       </div>
       
       <div>

@@ -2,7 +2,7 @@ import AudioItem from "@/components/UIs/AudioItem";
 import TopNav from "@/components/nav/TopNav";
 import BottomNavBar from "@/components/nav/BottomNavBar";
 
-const  Player = ({ params }: { params: { category: string } }) => {
+export default function Page({ params }: { params: { category: string } }) {
   return (
     <>
     <div className="mb-3 mx-5">
@@ -30,5 +30,3 @@ const  Player = ({ params }: { params: { category: string } }) => {
     </>
     )
 }
-
-export default Player;
