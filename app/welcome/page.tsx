@@ -35,9 +35,9 @@ const Welcome: React.FC = () => {
                     <h2>Choose a category</h2>
                 </div>
                 <div className="flex flex-row gap-4 mt-3">
-                <CategoryCard/>
-                <CategoryCard/>
-                <CategoryCard/>
+                <CategoryCard name="hope" briefDescription="hope" image="hope"/>
+                <CategoryCard name="hope" briefDescription="hope" image="hope"/>
+                <CategoryCard name="hope" briefDescription="hope" image="hope"/>
               </div>  
 
             </section>
@@ -46,9 +46,9 @@ const Welcome: React.FC = () => {
                     <h2>Recommended for you</h2>
                 </div>
                 <div className="flex flex-col gap-2 mt-3">
-                <AudioItem/>
-                <AudioItem/>
-                <AudioItem/>
+                <AudioItem title="hope" desc="hope" image="hope"/>
+                <AudioItem title="hope" desc="hope" image="hope"/>
+                <AudioItem title="hope" desc="hope" image="hope"/>
                 
               </div>  
 

@@ -18,10 +18,10 @@ export default function Page({ params }: { params: { category: string } }) {
           <span className="font-bold ">Did you know?</span> listening to words of encouragement can help improve your mood!
         </p>
      </div>
-    <AudioItem/>
-    <AudioItem/>
-    <AudioItem/>
-    <AudioItem/>
+    <AudioItem title="hope" desc="hope" image="hope"/>
+    <AudioItem title="hope" desc="hope" image="hope"/>
+    <AudioItem title="hope" desc="hope" image="hope"/>
+    <AudioItem title="hope" desc="hope" image="hope"/>
     
     </main>
     <div>

@@ -16,12 +16,12 @@ const Categories: React.FC = () => {
       
       <TopNav/>
       <div className='flex flex-wrap gap-4'>
-      <CategoryCard/>
-      <CategoryCard/>
-      <CategoryCard/>
-      <CategoryCard/>
-      <CategoryCard/>
-      <CategoryCard/>
+      <CategoryCard name="hope" briefDescription="hope" image="hope"/>
+      <CategoryCard name="hope" briefDescription="hope" image="hope"/>
+      <CategoryCard name="hope" briefDescription="hope" image="hope"/>
+      <CategoryCard name="hope" briefDescription="hope" image="hope"/>
+      <CategoryCard name="hope" briefDescription="hope" image="hope"/>
+      <CategoryCard name="hope" briefDescription="hope" image="hope"/>
       </div>
     </main>
     <BottomNavBar/>
