@@ -17,7 +17,7 @@ type RecommendedProps = {
 }
 
 
-const RecommendedItem = ({title, desc, image}: RecommendedProps) => {
+const AudioItem = ({title, desc, image}: RecommendedProps) => {
 
     let likedChangeHandler: (likeStatus: LikeState)=> void;
 
@@ -33,9 +33,9 @@ const RecommendedItem = ({title, desc, image}: RecommendedProps) => {
             
                 
                 
-                <div className="flex flex-row justify-center items-center">
-                    <div className="h-16 w-72 shadow-xl border-2 border-black border-opacity-20 rounded-xl grid grid-cols-6 justify-between items-center">
-                        <div className="h-12 w-12 col-span-2">
+                <div className="flex flex-row justify-center items-center ">
+                    <div className="h-24 w-96 shadow-xl border-2 border-black gap-4 border-opacity-20 rounded-xl grid grid-cols-6 justify-between items-center">
+                        <div className="h-20 w-20 col-span-2">
                         <Image src={listeningImage.src} width={500} height={500} alt="image" className="h-full w-full object-cover rounded-lg ml-2"/>
                         </div>
                         <span className="font-bold text-black col-span-3">
@@ -56,4 +56,4 @@ const RecommendedItem = ({title, desc, image}: RecommendedProps) => {
 
     );
 }
-export default RecommendedItem;
+export default AudioItem;
