@@ -3,18 +3,26 @@ import AudioItem from "@/components/UIs/AudioItem";
 import TopNav from "@/components/nav/TopNav";
 import BottomNavBar from "@/components/nav/BottomNavBar";
 import listeningImage from '../../../components/images/music.jpeg';
+import { FaPlay, FaPause } from "react-icons/fa";
 import Image from "next/image";
 import { useState } from "react";
 
 type ReadRec = "recommended" | "read";
-export default function Page({ params }: { params: { inspire: string } }) {
+type Play = boolean;
+
+function InspirePage({ params }: { params: { inspire: string } }) {
 
   const [readRec, setReadRec] = useState<ReadRec>("recommended");
-    let readRecHandler: (readRecValue: ReadRec)=> void;
+  const [play, setPlay] = useState<Play>(false);
+    
+  let readRecHandler: (readRecValue: ReadRec)=> void;
+  let playHandler: ()=> void;
 
     readRecHandler = (readRecValue)=> {
       setReadRec(readRecValue);
     }
+
+    playHandler = () => setPlay(()=>!play);
 
 
   return (
@@ -24,11 +32,17 @@ export default function Page({ params }: { params: { inspire: string } }) {
      </div>
      <div className="">
      <div className="flex flex-col justify-center items-center">
-     <div className="h-96 w-80 mt-4">
-        <Image src={listeningImage} alt="main image" className="w-full h-full object-cover rounded-3xl"/>
+      <div className="absolute z-10 text-5xl">
+            {!play && <FaPlay onClick={playHandler}/>}
+            {play && <FaPause onClick={playHandler}/>}
       </div>
-        <div className="w-64 h-1 bg-red-500 mt-4 rounded-full">
-        </div>
+     <div className="h-96 w-80 mt-4 relative">
+  <Image src={listeningImage} alt="main image" className="w-full h-full object-cover rounded-3xl" />
+  <div className="absolute inset-0 bg-black opacity-50 rounded-3xl"></div>
+</div>
+
+        {/* <div className="w-64 h-1 bg-red-500 mt-4 rounded-full">
+        </div> */}
         
       </div>
       <div className="flex flex-col gap-2  mt-5 justify-center items-center ">
@@ -56,3 +70,5 @@ export default function Page({ params }: { params: { inspire: string } }) {
     </main>
     )
 }
+
+export default InspirePage;
