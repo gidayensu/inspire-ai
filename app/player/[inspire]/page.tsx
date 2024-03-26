@@ -6,7 +6,7 @@ function InspirePage({ params }: { params: { inspire: string } }) {
 
 
   return (
-<PlayerUi/>
+<PlayerUi params={{inspire:'test'}}/>
     )
 }
 

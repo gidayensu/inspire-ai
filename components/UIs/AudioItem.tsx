@@ -29,7 +29,8 @@ const AudioItem = ({title, desc, image}: RecommendedProps) => {
         let handleClickOutside: (event:any)=> void;
         let handleEscapePress: (event: any)=> void;
         handleClickOutside = (event) => {
-            if (audioMenuRef.current && !audioMenuRef.current.contains(event.target)) {
+            // if (audioMenuRef.current && !audioMenuRef.current.contains(event.target)) {
+            if (audioMenuRef.current ) {
                 setAudioMenu(false);
             }
         };
