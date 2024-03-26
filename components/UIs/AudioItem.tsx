@@ -77,7 +77,7 @@ const AudioItem = ({title, desc, image}: RecommendedProps) => {
                     {liked === 'notLiked' && <FaRegHeart className="text-black opacity-80" onClick={()=>likedChangeHandler('liked')}/>}
                     {liked === 'liked' && <FaHeart className="text-red-500" onClick={()=>likedChangeHandler('notLiked')}/>}
                 </div>
-                <div className="text-black relative flex justify-center items-center z-30">
+                <div className="text-black relative flex justify-center items-center z-30 text-2xl">
                     <div onClick={audioMenuHandler}>
                         <PiDotsThreeVertical/>
                     </div>
