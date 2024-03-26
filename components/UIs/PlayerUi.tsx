@@ -31,9 +31,9 @@ function PlayerUi({ params }: { params: { inspire: string } }) {
             {!play && <FaPlay onClick={playHandler}/>}
             {play && <FaPause onClick={playHandler}/>}
       </div>
-     <div className="h-96 w-[400px] relative backdrop-blur-xl">
-     <div className=" bg-black absolute rounded-lg h-96 w-[440px]  bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-10 rounded-es-[60px] "></div>
-  <Image src={listeningImage} alt="main image" className="w-full h-full object-cover rounded-es-[60px]  " />
+     <div className="h-96 w-[50vh] relative backdrop-blur-xl">
+     <div className=" bg-black absolute rounded-lg h-96 w-[50vh]  bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-10 rounded-es-[80px] "></div>
+  <Image src={listeningImage} alt="main image" className="w-full h-full object-cover rounded-es-[80px]  " />
   
 </div>
 

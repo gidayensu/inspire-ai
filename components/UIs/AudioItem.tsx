@@ -82,10 +82,10 @@ const AudioItem = ({title, desc, image}: RecommendedProps) => {
                         <PiDotsThreeVertical/>
                     </div>
                     {audioMenu && 
-                        <div ref={audioMenuRef} className="audio-menu w-20 h-20 border border-black  bg-white border-opacity-30 absolute shadow-xl rounded-md flex flex-col gap-2 justify-center items-start pl-2">
-                            <p className="text-[10px] flex flex-row justify-center items-center gap-1 hover:bg-black hover:text-white"> <MdOutlineWatchLater/> Listen later</p>
-                            <p className="text-[10px] flex flex-row justify-center items-center gap-1"> <RiPlayListFill/> Listen next</p>
-                            <p className="text-[10px] flex flex-row justify-center items-center gap-1"> <MdOutlineWatchLater/> Add to fav</p>
+                        <div ref={audioMenuRef} className="audio-menu w-20 h-20 border border-black  bg-white border-opacity-30 absolute shadow-xl rounded-md flex flex-col justify-center items-start pl-2">
+                            <p className="text-[10px] flex flex-row justify-center items-center gap-1 -mb-2 "> <MdOutlineWatchLater/> Listen later</p>
+                            <p className="text-[10px] flex flex-row justify-center items-center gap-1 -mb-2"> <RiPlayListFill/> Listen next</p>
+                            <p className="text-[10px] flex flex-row justify-center items-center gap-1 -mb-2"> <MdOutlineWatchLater/> Add to fav</p>
                         </div>
                     }
                 </div>
