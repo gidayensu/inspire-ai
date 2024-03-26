@@ -24,7 +24,7 @@ const BottomNavBar:React.FC = ()=> {
 
     
     return(
-        <div style={{ position: 'fixed', bottom: '0', left: '0', right: '0', zIndex: '999', top: 'auto' }}>
+        <div className = "fixed bottom-0 left-0 right-0 top-auto z-50" >
         <div className="bottom-0 h-16 bg-white text-black text-2xl w-full grid justify-center sticky items-center">
           <div className="w-full grid grid-cols-5 gap-6 opacity-80 mt-4 items-center justify-center">
             <div className="home">
