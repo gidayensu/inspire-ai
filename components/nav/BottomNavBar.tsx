@@ -1,12 +1,13 @@
 'use client'
 
 import { RiUser6Fill, RiUser6Line } from "react-icons/ri";
+import { AiOutlinePlayCircle, AiFillPlayCircle } from "react-icons/ai";
 import { GoHome, GoHomeFill,  } from "react-icons/go";
 import { BiCategory, BiHeart, BiSolidHeart, BiSolidCategory } from "react-icons/bi";
 import { useRouter } from "next/navigation";
 import { usePathname } from "next/navigation";
 
-type BottomNavUrl = '/' | '/profile' | '/favorites' | '/categories';
+type BottomNavUrl = '/' | '/profile' | '/favorites' | '/categories' | '/player';
 
 
 const BottomNavBar:React.FC = ()=> {
@@ -23,8 +24,8 @@ const BottomNavBar:React.FC = ()=> {
 
     
     return(
-        <div className="bottom-0 h-12 bg-white text-black text-2xl w-full  grid justify-center fixed items-center shadow-xl ">
-            <div className=" w-full grid grid-cols-4 gap-10 opacity-80 mt-4">
+        <div className="bottom-0 h-16 bg-white text-black text-2xl w-full  grid justify-center fixed items-center ">
+            <div className=" w-full grid grid-cols-5 gap-6 opacity-80 mt-4 items-center justify-center">
                     <div className="home">
                     {path !== '/' ? <GoHome onClick={()=>navStateHandler('/')}/> 
                     : <GoHomeFill/>}
@@ -37,6 +38,14 @@ const BottomNavBar:React.FC = ()=> {
                     
                             
                     </div>
+
+                    <div className="player text-4xl">
+                    {!path.startsWith('/player') ? <AiOutlinePlayCircle onClick={()=>navStateHandler('/player')}/> 
+                      : <AiFillPlayCircle />}
+                    
+                            
+                    </div>
+
                     <div >
                             {!path.startsWith('/favorites')  ? <BiHeart onClick={()=>navStateHandler('/favorites')}/> : <BiSolidHeart />}
                              

@@ -1,11 +1,9 @@
 'use client'
 import { useState } from "react";
-
 import { FaHeart, FaRegHeart } from "react-icons/fa";
-
 import listeningImage from '../../components/images/music.jpeg';
-
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 
 
@@ -16,24 +14,28 @@ type RecommendedProps = {
     image: string
 }
 
+type AudioLink = string;
+
 
 const AudioItem = ({title, desc, image}: RecommendedProps) => {
+    const router = useRouter();
 
     let likedChangeHandler: (likeStatus: LikeState)=> void;
+    let audioLinkHandler: (audioLink: AudioLink)=> void;
 
     likedChangeHandler = (likeStatus)=> {
-        setLiked(likeStatus)
+        setLiked(likeStatus);
+    }
+
+    audioLinkHandler = (audioLink) => {
+        router.push(audioLink);
     }
 
 
     const [liked, setLiked] = useState<LikeState>('notLiked');
     
-    return (
-            
-            
-                
-                
-                <div className="flex flex-row justify-center items-center ">
+    return (        
+                <div className="flex flex-row justify-center items-center cursor-pointer" onClick={()=>audioLinkHandler('/player/1')}>
                     <div className="h-24 w-96 shadow-xl border-2 border-black gap-4 border-opacity-20 rounded-xl grid grid-cols-6 justify-between items-center">
                         <div className="h-20 w-20 col-span-2">
                         <Image src={listeningImage.src} width={500} height={500} alt="image" className="h-full w-full object-cover rounded-lg ml-2"/>

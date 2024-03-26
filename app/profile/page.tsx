@@ -29,17 +29,17 @@ function Profile() {
   <main className="mx-5 flex flex-col gap-1 justify-center items-center mt-5">
     <div className="my-5 text-black text-center">
         <p className="">Welcome to AiNspire <br/> <span>{signUp ? 'Sign up' : 'Login'}</span> to Continue</p>
-         <p className="text-[12px] mt-4"> Have an account already? <span className="text-sky-700 font-bold cursor-pointer" onClick={signUpHandler}>{signUp ? 'Login' : 'Sign up'}</span></p>
+         
     </div>
-     <form action="" className="flex flex-col gap-5">
+     <form action="" className="flex flex-col gap-5 text-black">
         {signUp && 
         <div className="flex flex-row justify-start items-center">
           <label className="text-black absolute ml-3 opacity-50"><FiUser/></label>
-          <input type="text" className="h-12 w-72 border border-opacity-20 rounded-xl text-sm border-black pl-12" placeholder="Useername"/>
+          <input type="text" className="h-12 w-72 border border-opacity-20 rounded-xl text-sm border-black pl-12" placeholder="Username"/>
         </div>}
         <div className="flex flex-row justify-start items-center">
         <label className="text-black absolute ml-3 opacity-50"><LuMail/></label>
-        <input type="text" className="h-12 w-72 border border-opacity-20 rounded-xl text-sm border-black pl-12" placeholder="Useername"/>
+        <input type="email" className="h-12 w-72 border border-opacity-20 rounded-xl text-sm border-black pl-12" placeholder="Email"/>
         </div>
       
         <div className="flex flex-row justify-start items-center">
@@ -52,6 +52,7 @@ function Profile() {
       
         <button type="submit" className="w-72 h-12 text-white rounded-xl bg-black">{signUp ? 'Sign Up' : 'login'}</button>
      </form>
+     <p className="text-[12px] mt-4 text-black"> Have an account already? <span className="text-sky-700 font-bold cursor-pointer" onClick={signUpHandler}>{signUp ? 'Login' : 'Sign up'}</span></p>
           <div className="flex flex-row justify-center items-center  mt-5 gap-4">
               <div className="bg-black h-[2px] w-28 opacity-40"></div>
               <p className="text-black">OR</p>

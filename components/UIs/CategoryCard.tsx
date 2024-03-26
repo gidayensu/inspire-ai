@@ -2,16 +2,24 @@
 import { FaLongArrowAltRight } from "react-icons/fa";
 import listeningImage from '../../components/images/music.jpeg';
 import Image from "next/image";
-
+import { useRouter } from "next/navigation";
 type CategoryProps = {
     name: string,
     briefDescription: string, 
     image: string,
 }
 
+type CategoryLink = string;
+
 const CategoryCard = ({name, briefDescription, image}: CategoryProps) => {
+    const router=useRouter();
+
+    let categoryLinkHandler: (categoryLink: CategoryLink)=> void;
+    categoryLinkHandler = (categoryLink)=> {
+        router.push(categoryLink)
+    }
     return (
-            <section className="flex flex-col">
+            <section className="flex flex-col cursor-pointer" onClick={()=>categoryLinkHandler('/categories/store')}>
                 
                 <div className="flex flex-row gap-4 ">
                 <div className="flex flex-col justify-center items-center">
