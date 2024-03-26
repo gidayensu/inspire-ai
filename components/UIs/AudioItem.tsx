@@ -85,7 +85,7 @@ const AudioItem = ({title, desc, image}: RecommendedProps) => {
                         <div ref={audioMenuRef} className="audio-menu w-20 h-20 border border-black  bg-white border-opacity-30 absolute shadow-xl rounded-md flex flex-col justify-center items-start pl-2">
                             <p className="text-[10px] flex flex-row justify-center items-center gap-1 -mb-2 "> <MdOutlineWatchLater/> Listen later</p>
                             <p className="text-[10px] flex flex-row justify-center items-center gap-1 -mb-2"> <RiPlayListFill/> Listen next</p>
-                            <p className="text-[10px] flex flex-row justify-center items-center gap-1 -mb-2"> <MdOutlineWatchLater/> Add to fav</p>
+                            <p className="text-[10px] flex flex-row justify-center items-center gap-1 -mb-2"> <FaRegHeart/> Add to fav</p>
                         </div>
                     }
                 </div>
