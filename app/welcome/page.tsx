@@ -1,10 +1,10 @@
 'use client'
 import { useState } from "react";
 
-import BottomNavBar from "@/components/nav/BottomNavBar";
+
 import CategoryCard from "@/components/UIs/CategoryCard";
 import AudioItem from "@/components/UIs/AudioItem";
-import TopNav from "@/components/nav/TopNav";
+
 type ThemeState = "light" | "dark";
 type LikeState = 'liked' | "notLiked";
 
@@ -29,7 +29,7 @@ const Welcome: React.FC = () => {
     return (
         <>
         <main className="mx-5">
-            <TopNav/>
+            
             <section className="flex flex-col mt-5">
                 <div className="font-bold text-black text-[12px]">
                     <h2>Choose a category</h2>
@@ -37,7 +37,7 @@ const Welcome: React.FC = () => {
                 <div className="flex flex-row gap-4 mt-3">
                 <CategoryCard name="hope" briefDescription="hope" image="hope"/>
                 <CategoryCard name="hope" briefDescription="hope" image="hope"/>
-                <CategoryCard name="hope" briefDescription="hope" image="hope"/>
+
               </div>  
 
             </section>
@@ -53,9 +53,9 @@ const Welcome: React.FC = () => {
               </div>  
 
             </section>
-           
+             
         </main>
-        <BottomNavBar/>
+        
         </>
     );
 }

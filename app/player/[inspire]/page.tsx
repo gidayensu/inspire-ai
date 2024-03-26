@@ -1,7 +1,5 @@
 'use client'
 import AudioItem from "@/components/UIs/AudioItem";
-import TopNav from "@/components/nav/TopNav";
-import BottomNavBar from "@/components/nav/BottomNavBar";
 import listeningImage from '../../../components/images/music.jpeg';
 import { FaPlay, FaPause } from "react-icons/fa";
 import Image from "next/image";
@@ -27,9 +25,6 @@ function InspirePage({ params }: { params: { inspire: string } }) {
 
   return (
     <main className="mb-3 mx-5">
-    <div className="">
-     <TopNav />
-     </div>
      <div className="">
      <div className="flex flex-col justify-center items-center">
       <div className="absolute z-10 text-5xl">
@@ -58,15 +53,13 @@ function InspirePage({ params }: { params: { inspire: string } }) {
           </div>}
           {readRec === 'read' && <div className="border h-52 w-80 border-black border-opacity-50 rounded-2xl ">
             <p className="text-black p-4">
-                There are many things that happen in the world. You shold never give up because things do not  go as you desire. Eventually. Things will work it. It is hard
+                There are many things that happen in the world. You should never give up because things do not  go as you desire. Eventually. Things will work it. It is hard
                 yes, but it will get better with time. Keep moving. 
             </p>
           </div>}
         </div>
         </div>
-    <div>
-      <BottomNavBar/>
-    </div>
+    
     </main>
     )
 }

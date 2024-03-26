@@ -1,13 +1,9 @@
 import AudioItem from "@/components/UIs/AudioItem";
-import TopNav from "@/components/nav/TopNav";
-import BottomNavBar from "@/components/nav/BottomNavBar";
+
 
 function Fav({ params }: { params: { category: string } }) {    
   return (
-    <>
-    <div className="mb-3 mx-5">
-     <TopNav />
-     </div>
+
   <main className="mx-5 flex flex-col gap-2">
      
      <div className="flex flex-col justify-center items-center">
@@ -24,10 +20,6 @@ function Fav({ params }: { params: { category: string } }) {
     <AudioItem title="hope" desc="hope" image="hope"/>
     
     </main>
-    <div>
-      <BottomNavBar/>
-    </div>
-    </>
     )
 }
 export default Fav;
