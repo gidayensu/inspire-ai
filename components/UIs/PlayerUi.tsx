@@ -25,15 +25,16 @@ function PlayerUi({ params }: { params: { inspire: string } }) {
 
   return (
     <main className="mb-3 mx-5">
-     <div className="">
+     
      <div className="flex flex-col justify-center items-center relative">
       <div className="absolute z-10 text-5xl">
             {!play && <FaPlay onClick={playHandler}/>}
             {play && <FaPause onClick={playHandler}/>}
       </div>
-     <div className="h-96 w-80 mt-4 relative">
-  <Image src={listeningImage} alt="main image" className="w-full h-full object-cover rounded-3xl" />
-  <div className="absolute inset-0 bg-black opacity-50 rounded-3xl"></div>
+     <div className="h-96 w-[400px] relative backdrop-blur-xl">
+     <div className=" bg-black absolute rounded-lg h-96 w-[440px]  bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-10 rounded-es-[60px] "></div>
+  <Image src={listeningImage} alt="main image" className="w-full h-full object-cover rounded-es-[60px]  " />
+  
 </div>
 
         {/* <div className="w-64 h-1 bg-red-500 mt-4 rounded-full">
@@ -60,7 +61,7 @@ function PlayerUi({ params }: { params: { inspire: string } }) {
             </p>
           </div>}
         </div>
-        </div>
+        
     
     </main>
     )

@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Roboto } from "next/font/google";
 import "./globals.css";
 import BottomNavBar from "@/components/nav/BottomNavBar";
 import TopNav from "@/components/nav/TopNav";
-import LoadingBar from "react-top-loading-bar";
-import { useEffect, useState } from "react";
 
-const inter = Inter({ subsets: ["latin"] });
+
+const inter = Roboto({ weight: '300', subsets:['latin']});
 
 export const metadata: Metadata = {
   title: "Inspire AI",
@@ -21,7 +20,7 @@ export default function RootLayout({
 
 {
 
-  type Progress = number;
+
   return (
     <html lang="en">
       <body className={`${inter.className} pb-16`}>

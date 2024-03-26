@@ -14,14 +14,14 @@ const TopNav: React.FC = () => {
     const [themeIcon, setThemeIcon] = useState<ThemeState>("light");
   
     return (
-        <section className="mt-5 flex justify-between ">
+        <section className="mt-5 flex justify-between top-0 absolute z-20 ">
                 <div className="font-bold">
-                    <h2 className="text-black text-[12px]  ">Welcome, Jane Doe</h2>
-                    <p className="text-black text-[10px] text-opacity-40 ">Enjoy a relaxing moment</p>
+                    <h2 className="text-white text-[12px]  ">Welcome, Jane Doe</h2>
+                    <p className="text-white text-[10px] text-opacity-40 ">Enjoy a relaxing moment</p>
                 </div>
                 <div className="">
-                    {themeIcon === "light" && <MdOutlineLightMode className="text-black text-xl" onClick={()=>themeChangeHandler('dark')}/>}
-                    {themeIcon === "dark" && <MdDarkMode className="text-black text-xl" onClick={()=>themeChangeHandler('light')}/>}
+                    {themeIcon === "light" && <MdOutlineLightMode className="text-white text-xl" onClick={()=>themeChangeHandler('dark')}/>}
+                    {themeIcon === "dark" && <MdDarkMode className="text-white text-xl" onClick={()=>themeChangeHandler('light')}/>}
                 </div>
             </section>
 

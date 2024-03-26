@@ -23,7 +23,7 @@ const CategoryCard = ({name, briefDescription, image}: CategoryProps) => {
                 
                 <div className="flex flex-row gap-4 ">
                 <div className="flex flex-col justify-center items-center">
-                    <div className="bg-black absolute rounded-lg h-12 w-28 md:w-[500px] md:h-24 mt-28 font-bold p-3  bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-10 border border-gray-100">
+                    <div className="bg-black absolute rounded-lg h-12 w-28 md:w-[500px] md:h-24 mt-28 font-bold p-3 bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-10 border border-gray-100">
                         <div className="flex flex-row md:mx-32 justify-between items-center">
                             <span>
                                     <p className="text-[12px]">Hope</p>
